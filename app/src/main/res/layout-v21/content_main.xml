@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/app_name"
+    android:elevation="20dp"
+    tools:context=".Game"
+    tools:showIn="@layout/activity_game">
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/board"
+        android:columnCount="3"
+        android:elevation="20dp"
+        android:rowCount="3">
+
+        <ImageView
+            android:elevation="50dp"
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:onClick="gameLogic"
+            android:tag="0"
+            android:contentDescription="TODO"
+            android:layout_marginEnd="25dp" />
+
+        <ImageView
+            android:elevation="50dp"
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_column="0"
+            android:layout_marginTop="50dp"
+            android:layout_row="1"
+            android:onClick="gameLogic"
+            android:tag="1"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:elevation="50dp"
+            android:id="@+id/imageView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_column="0"
+            android:layout_marginTop="60dp"
+            android:layout_row="2"
+            android:onClick="gameLogic"
+            android:tag="2"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_column="1"
+            android:elevation="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:onClick="gameLogic"
+            android:tag="3"
+            android:contentDescription="TODO"
+            android:layout_marginStart="15dp" />
+
+        <ImageView
+            android:elevation="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/imageView5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_column="1"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_row="1"
+            android:onClick="gameLogic"
+            android:tag="4"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:elevation="50dp"
+            android:id="@+id/imageView6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_column="1"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_row="2"
+            android:onClick="gameLogic"
+            android:tag="5"
+            android:layout_marginStart="15dp" />
+
+        <ImageView
+            android:elevation="50dp"
+            android:id="@+id/imageView7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_column="2"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:onClick="gameLogic"
+            android:tag="6" />
+
+        <ImageView
+            android:elevation="50dp"
+            android:id="@+id/imageView8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_column="2"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_row="1"
+            android:onClick="gameLogic"
+            android:tag="7" />
+
+        <ImageView
+            android:elevation="50dp"
+            android:id="@+id/imageView9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_column="2"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="60dp"
+            android:layout_row="2"
+            android:onClick="gameLogic"
+            android:tag="8" />
+
+
+    </GridLayout>
+
+    <LinearLayout
+        android:elevation="30dp"
+        android:id="@+id/winnerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="vertical">
+
+        <TextView
+            android:elevation="30dp"
+            android:id="@+id/textView"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="25dp"
+            android:elevation="0dp"
+            android:onClick="playAgain"
+            android:text="Play Again" />
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/button2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="reMatch"
+        android:text="RE"
+        android:textColor="?attr/colorBackgroundFloating"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>
